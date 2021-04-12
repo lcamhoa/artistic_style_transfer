@@ -11,6 +11,7 @@ import utils
 def setup():
     utils.safe_mkdir('checkpoints')
     utils.safe_mkdir('outputs')
+    utils.safe_mkdir('logs')
 
 class StyleTransfer(object):
     def __init__(self, content_img, style_img, img_width, img_height):
@@ -200,6 +201,9 @@ class StyleTransfer(object):
             if ckpt and ckpt.model_checkpoint_path:
                 saver.restore(sess, ckpt.model_checkpoint_path)
             ##############################
+
+            ######### Support TensorBoard 
+            file_writer = tf.summary.FileWriter('logs', sess.graph)
 
             initial_step = self.gstep.eval()
             
