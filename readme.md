@@ -4,13 +4,13 @@
 
 ## Overview:
 
+- Python (3.7.1)
 - Upgrade Tensorflow 1.4.1 to 1.14.0 
 
 ## Hướng dẫn cài đặt:
 
-
 Tham khảo setup/setup_instruction.md
-
+- Python (3.7.1)
 
 ```
 python3 -m venv .env
